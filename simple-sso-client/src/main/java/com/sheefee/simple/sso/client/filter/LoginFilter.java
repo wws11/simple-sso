@@ -50,7 +50,8 @@ public class LoginFilter implements Filter {
 		}
 
 		// 重定向至登录页面，并附带当前请求地址
-		response.sendRedirect(config.getInitParameter(AuthConst.LOGIN_URL) + "?" + AuthConst.CLIENT_URL + "=" + request.getRequestURL());
+		//response.sendRedirect(config.getInitParameter(AuthConst.LOGIN_URL) + "?" + AuthConst.CLIENT_URL + "=" + request.getRequestURL());
+		response.sendRedirect("http://localhost:8080/" + "?" + AuthConst.CLIENT_URL + "=" + request.getRequestURL());
 	}
 
 	@Override
